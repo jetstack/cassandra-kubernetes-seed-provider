@@ -14,9 +14,8 @@
  * the License.
  */
 
-package io.k8s.cassandra;
+package io.jetstack.cassandra;
 
-import com.google.common.collect.ImmutableMap;
 import org.apache.cassandra.locator.SeedProvider;
 import org.junit.Ignore;
 import org.junit.Test;
