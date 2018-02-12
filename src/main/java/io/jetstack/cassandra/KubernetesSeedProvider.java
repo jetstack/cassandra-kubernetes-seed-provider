@@ -170,7 +170,7 @@ public class KubernetesSeedProvider implements SeedProvider {
      * incase we don't find seeds
      * @return
      */
-    protected List<InetAddress> createDefaultSeeds()
+    private List<InetAddress> createDefaultSeeds()
     {
         Config conf;
         try {
@@ -205,7 +205,7 @@ public class KubernetesSeedProvider implements SeedProvider {
      * Code taken from {@link SimpleSeedProvider}
      * @return
      */
-    protected static Config loadConfig() throws ConfigurationException
+    private static Config loadConfig() throws ConfigurationException
     {
         String loaderClass = System.getProperty("cassandra.config.loader");
         ConfigurationLoader loader = loaderClass == null
