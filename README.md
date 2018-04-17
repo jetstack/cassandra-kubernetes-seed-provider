@@ -1,8 +1,17 @@
-# Cassandra on Kubernetes Custom Seed Provider: releases.k8s.io/HEAD
+cassandra-kubernetes-seed-provider
+==================================
 
-Within any deployment of Cassandra a Seed Provider is used for node discovery and communication.  When a Cassandra node first starts it must discover which nodes, or seeds, for the information about the Cassandra nodes in the ring / rack / datacenter.
+A custom seed provider for cassandra on kubernetes.
 
-This Java project provides a custom Seed Provider which communicates with the Kubernetes API to discover the required information.  This provider is bundled with the Docker provided in this example.
+Within any deployment of Cassandra a Seed Provider is used for node discovery and communication.
+When a Cassandra node first starts it must discover which nodes, or seeds, for the information about the Cassandra nodes in the ring / rack / datacenter.
+
+This Java project provides a custom Seed Provider which communicates with the Kubernetes API to discover the required information.
+
+# Navigator
+
+This seed provider was forked from [kubernetes/examples](https://github.com/kubernetes/examples/tree/master/cassandra),
+for use with [Navigator](https://github.com/jetstack/navigator/).
 
 # Configuring the Seed Provider
 
@@ -18,17 +27,4 @@ The following environment variables may be used to override the default configur
 
 # Using
 
-
 If no endpoints are discovered from the API the seeds configured in the cassandra.yaml file are used.
-
-# Provider limitations
-
-This Cassandra Provider implements `SeedProvider`. and utilizes `SimpleSnitch`.  This limits a Cassandra Ring to a single Cassandra Datacenter and ignores Rack setup.  Datastax provides more documentation on the use of [_SNITCHES_](https://docs.datastax.com/en/cassandra/3.x/cassandra/architecture/archSnitchesAbout.html).  Further development is planned to
-expand this capability.
-
-This in affect makes every node a seed provider, which is not a recommended best practice.  This increases maintenance and reduces gossip performance.
-
-
-<!-- BEGIN MUNGE: GENERATED_ANALYTICS -->
-[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/examples/storage/cassandra/java/README.md?pixel)]()
-<!-- END MUNGE: GENERATED_ANALYTICS -->
