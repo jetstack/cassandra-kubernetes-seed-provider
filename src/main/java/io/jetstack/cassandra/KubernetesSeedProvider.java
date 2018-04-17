@@ -23,7 +23,6 @@ import org.apache.cassandra.exceptions.ConfigurationException;
 import org.apache.cassandra.locator.SeedProvider;
 import org.apache.cassandra.locator.SimpleSeedProvider;
 import org.apache.cassandra.utils.FBUtilities;
-import org.apache.cassandra.locator.InetAddressAndPort;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
