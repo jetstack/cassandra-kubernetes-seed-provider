@@ -8,12 +8,21 @@ When a Cassandra node first starts it must discover which nodes, or seeds, for t
 
 This Java project provides a custom Seed Provider which communicates with the Kubernetes API to discover the required information.
 
-# Navigator
+Navigator
+---------
 
 This seed provider was forked from [kubernetes/examples](https://github.com/kubernetes/examples/tree/master/cassandra),
 for use with [Navigator](https://github.com/jetstack/navigator/).
 
-# Configuring the Seed Provider
+Building
+--------
+
+First install Maven, then run
+
+    make
+
+Configuring the Seed Provider
+-----------------------------
 
 The following environment variables may be used to override the default configurations:
 
@@ -25,6 +34,7 @@ The following environment variables may be used to override the default configur
 | POD_NAMESPACE                  | default                               | Default pod service namespace    |
 | K8S_ACCOUNT_TOKEN 		 | /var/run/secrets/kubernetes.io/serviceaccount/token | Default path to service token |
 
-# Using
+Using
+-----
 
 If no endpoints are discovered from the API the seeds configured in the cassandra.yaml file are used.
