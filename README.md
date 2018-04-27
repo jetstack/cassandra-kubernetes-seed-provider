@@ -17,9 +17,11 @@ for use with [Navigator](https://github.com/jetstack/navigator/).
 Building
 --------
 
-First install Maven, then run
+First install bazel, then run
 
-    make
+    bazel build //:cassandra-kubernetes-seed-provider
+
+the resulting .jar can be found at `bazel-bin/libcassandra-kubernetes-seed-provider.jar`.
 
 Configuring the Seed Provider
 -----------------------------
