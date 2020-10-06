@@ -1,3 +1,5 @@
+:warning: This project is no longer supported by Jetstack and only remains here for archive purposes :warning:
+
 cassandra-kubernetes-seed-provider
 ==================================
 
