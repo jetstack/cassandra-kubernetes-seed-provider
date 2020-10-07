@@ -1,5 +1,9 @@
 :warning: This project is no longer supported by Jetstack and only remains here for archive purposes :warning:
 
+The Instaclustr operator has a `SeedProvider`: https://github.com/instaclustr/cassandra-operator/blob/master/java/cassandra-4-k8s-addons/src/main/java/com/instaclustr/cassandra/k8s/SeedProvider.java
+
+The Datastax operator uses a service instead of a custom seed provider: https://github.com/datastax/cass-operator/blob/26ad52bfc8f450852f5573fa2904a5df407ce2d3/docs/developer/seeds.md
+
 cassandra-kubernetes-seed-provider
 ==================================
 
